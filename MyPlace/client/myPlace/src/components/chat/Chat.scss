@@ -1,0 +1,148 @@
+
+
+.chat{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+
+    .messages{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        h1{
+            font-weight: 200;
+        }
+
+        .message{
+        background-color: white;
+        padding: 5px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        height: 30px;
+            img{
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            span{
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    .chatBox{
+        flex: 3;
+        background-color: white;
+        display: flex;
+
+        flex-direction: column;
+        overflow-y: scroll;
+            scrollbar-width: none;
+       // justify-content: space-between;
+
+        .top{
+            background-color: #f7c14b85;
+        
+            padding:5px 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            position: relative; // Add this
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+              
+            }
+            .close{
+             
+                cursor: pointer;
+                position: absolute; // Add this
+                right: 10px; // Add this
+                top: 50%; // Add this
+                transform: translateY(-50%);
+            }
+            
+        }
+
+        .center{
+            flex:1;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .chatMessage{
+                width: 50%;
+
+
+                &.own{
+                  align-self: flex-end;
+                  text-align: right;
+                }
+
+                span{
+                    font-size: 10px;
+                    background-color: #f7c14b85;
+                    padding: 2px;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .bottom{
+
+            border-top: 1px solid #f7c14b85;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            
+            padding: 10px;
+
+            textarea{
+                flex:3;
+                height: 100%;
+                border: 1px solid #ccc;
+                resize: none;
+                padding: 10px;
+            }
+             button{
+                flex: 1;
+               
+            background-color: #f7c14b85;
+            height: 100%;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+             }
+
+        }
+    }
+}
